@@ -1,5 +1,22 @@
-<? xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <rules lang="tl">
+   <category id="MCO2_FILIPINO_SPELLING" name="Filipino Spelling 1">
+        <rule id="TY_TIY" name="Insert i between t and y">
+            <pattern case_sensitive="no">
+                <token regexp="yes">^ty([aeiou].*)</token>
+            </pattern>
 
+            <message>Mali ang baybay. Dapat ay may "i" sa pagitan ng t at y.</message>
+            <short>ty → tiy</short>
+
+            <suggestion>
+                <match no="1" regexp_match="ty([aeiou].*)" regexp_replace="tiy\1"/>
+            </suggestion>
+
+            <example correction="tiyak">Ito ay <marker>tyak</marker>.</example>
+            <example correction="tiyan">Masakit ang <marker>tyan</marker> ko.</example>
+            <example correction="tiyempo">Wala sa <marker>tyempo</marker> ang dating niya.</example>
+        </rule>
+    </category>
 </rules>
