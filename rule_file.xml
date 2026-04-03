@@ -17,6 +17,7 @@
             <example correction="tiyak">Ito ay <marker>tyak</marker>.</example>
             <example correction="tiyan">Masakit ang <marker>tyan</marker> ko.</example>
             <example correction="tiyempo">Wala sa <marker>tyempo</marker> ang dating niya.</example>
+            <example correction="tiyahin">Dadating na ang <marker>tyahin</marker> ko galing Japan.</example>
         </rule>
 		
 		<!-- Formal Rule is (Ce -> Ci) -->
