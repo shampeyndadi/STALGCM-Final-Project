@@ -56,7 +56,9 @@
 
 	  	<rule id="AI" name="ai(ay)">
             <pattern case_sensitive="no">
-                <token regexp="yes">.*[bcdfghjklmnpqrstvwxyz]ai<exception>tai</exception></token>
+                <token regexp="yes">.*[bcdfghjklmnpqrstvwxyz]ai
+                    <exception>tai</exception>
+                </token>
             </pattern>
             
             <message>Do you mean 
