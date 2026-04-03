@@ -59,7 +59,11 @@
                 <token regexp="yes">.*[bcdfghjklmnpqrstvwxyz]ai</token>
             </pattern>
             
-            <message>Do you mean <suggestion><match no="1" case_conversion="startlower" regexp_match="i$" regexp_replace="y"/></suggestion>?</message>
+            <message>Do you mean 
+				<suggestion>
+					<match no="1" case_conversion="startlower" regexp_match="i$" regexp_replace="y"/>
+				</suggestion>?
+			</message>
             <short>Sound and Letter Change</short>
             <example correction="tambay" type="incorrect">Tara <marker>tambai</marker> tayo sa labas mamaya.</example>
             <example type="correct">Tara <marker>tambay</marker> tayo sa labas mamaya.</example>
