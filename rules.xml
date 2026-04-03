@@ -4,20 +4,25 @@
   <category id="MCO2_FILIPINO_SPELLING" name="Filipino Spelling 1">
         <rule id="TY_TIY" name="Insert i between t and y">
             <pattern case_sensitive="no">
-                <token regexp="yes">^ty([aeiou].*)</token>
+                <token regexp="yes">.*ty[aeiou].*</token>
             </pattern>
 
             <message>Mali ang baybay. Dapat ay may "i" sa pagitan ng t at y.</message>
             <short>ty → tiy</short>
 
             <suggestion>
-                <match no="1" regexp_match="ty([aeiou].*)" regexp_replace="tiy\1"/>
+                <match no="1" regexp_match="ty([aeiou])" regexp_replace="tiy$1"/>
+            </suggestion>
+            <suggestion>
+                <match no="1" regexp_match="Ty([aeiou])" regexp_replace="Tiy$1"/>
             </suggestion>
 
             <example correction="tiyak">Ito ay <marker>tyak</marker>.</example>
             <example correction="tiyan">Masakit ang <marker>tyan</marker> ko.</example>
             <example correction="tiyempo">Wala sa <marker>tyempo</marker> ang dating niya.</example>
             <example correction="tiyahin">Dadating na ang <marker>tyahin</marker> ko galing Japan.</example>
+            <example correction="tiyuhin">Si <marker>tyuhin</marker> ko ay matapang.</example>
+            <example correction="matiyaga">Si Ornald ay <marker>matiyaga</marker>.</example>
         </rule>
 		
 		<!-- Formal Rule is (Ce -> Ci) -->
