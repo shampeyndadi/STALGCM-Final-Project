@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <rules lang="tl">
-   <category id="MCO2_FILIPINO_SPELLING" name="Filipino Spelling 1">
+  <category id="MCO2_FILIPINO_SPELLING" name="Filipino Spelling 1">
         <rule id="TY_TIY" name="Insert i between t and y">
             <pattern case_sensitive="no">
                 <token regexp="yes">^ty([aeiou].*)</token>
@@ -17,6 +17,35 @@
             <example correction="tiyak">Ito ay <marker>tyak</marker>.</example>
             <example correction="tiyan">Masakit ang <marker>tyan</marker> ko.</example>
             <example correction="tiyempo">Wala sa <marker>tyempo</marker> ang dating niya.</example>
+        </rule>
+		
+		<!-- Formal Rule is (Ce -> Ci) -->
+        <rule id="E" name="e(i)">
+            <pattern case_sensitive="no">
+                <token regexp="yes">bumile|nabile|pabile|binile|kinilite|kilite|kumilite|Nawile|Mawile</token>
+            </pattern>
+            
+			<message>Do you mean <suggestion><match no="1" case_conversion="startlower" regexp_match="e$" regexp_replace="i"/></suggestion>?</message>
+			<short>Sound and Letter Change</short>
+
+			<example correction="bumili" type="incorrect">Doon ka <marker>bumile</marker>.</example>
+			<example type="correct">doon ka <marker>bumili</marker>.</example>
+			<example correction="nabili" type="incorrect"><marker>Nabile</marker> mo na ba?</example>
+			<example type="correct"><marker>Nabili</marker> mo na ba?</example>
+			<example correction="pabili" type="incorrect"><marker>Pabile</marker> dyan.</example>
+			<example type="correct"><marker>Pabili</marker> dyan.</example>
+			<example correction="binili" type="incorrect">Kanina ko pa <marker>binile</marker>.</example>
+			<example type="correct">Kanina ko pa <marker>binili</marker>.</example>
+			<example correction="kiniliti" type="incorrect">Bakit mo siya <marker>kinilite</marker>?</example>
+			<example type="correct">Bakit mo siya <marker>kumiliti</marker>?</example>
+			<example correction="kiliti" type="incorrect">May <marker>kilite</marker> sa lalamunan ko.</example>
+			<example type="correct">May <marker>kiliti</marker> sa lalamunan ko.</example>
+			<example correction="kumiliti" type="incorrect">May <marker>kumilite</marker> sa akin.</example>
+			<example type="correct">May <marker>kumiliti</marker> sa akin.</example>
+			<example correction="nawili" type="incorrect"><marker>Nawile</marker> ako dyan.</example>
+			<example type="correct"><marker>Nawili</marker> ako dyan.</example>
+			<example correction="mawili" type="incorrect">Baka <marker>mawile</marker> ka.</example>
+			<example type="correct">Baka <marker>mawili</marker> ka.</example>
         </rule>
     </category>
 </rules>
