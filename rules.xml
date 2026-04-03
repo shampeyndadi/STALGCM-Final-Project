@@ -56,7 +56,7 @@
 
 	  	<rule id="AI" name="ai(ay)">
             <pattern case_sensitive="no">
-                <token regexp="yes">.*[bcdfghjklmnpqrstvwxyz]ai</token>
+                <token regexp="yes">.*[bcdfghjklmnpqrstvwxyz]ai<exception>tai</exception></token>
             </pattern>
             
             <message>Do you mean 
@@ -69,8 +69,8 @@
             <example type="correct">Tara <marker>tambay</marker> tayo sa labas mamaya.</example>
             <example correction="sanay" type="incorrect">Hindi pa ako <marker>sanai</marker> sa ginagawa natin.</example>
             <example type="correct">Hindi pa ako <marker>sanay</marker> sa ginagawa natin.</example>
-            <example correction="away" type="incorrect">Ayoko ng <marker>awai</marker> natin kagabi.</example>
-            <example type="correct">Ayoko ng <marker>away</marker> natin kagabi.</example>
+            <example correction="patay" type="incorrect"><marker>Patai</marker> ako sa exam bukas.</example>
+            <example type="correct"><marker>Patay</marker> ako sa exam bukas.</example>
         </rule>
     </category>
 </rules>
