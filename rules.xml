@@ -2,28 +2,34 @@
 
 <rules lang="tl">
   <category id="MCO2_FILIPINO_SPELLING" name="Filipino Spelling 1">
-        <rule id="TY_TIY" name="Insert i between t and y">
+        <rule id="ET_IT" name="ET(IT)">
             <pattern case_sensitive="no">
-                <token regexp="yes">.*ty[aeiou].*</token>
+                <token regexp="yes">.*et$</token>
             </pattern>
 
-            <message>Mali ang baybay. Dapat ay may "i" sa pagitan ng t at y.</message>
-            <short>ty → tiy</short>
+            <message>Do you mean <suggestion><match no="1" regexp_match="(.*)et$" regexp_replace="$1it"/></suggestion>?</message>
+            <short>Sound and Letter Change</short>
 
-            <suggestion>
-                <match no="1" regexp_match="ty([aeiou])" regexp_replace="tiy$1"/>
-            </suggestion>
-            <suggestion>
-                <match no="1" regexp_match="Ty([aeiou])" regexp_replace="Tiy$1"/>
-            </suggestion>
-
-            <example correction="tiyak">Ito ay <marker>tyak</marker>.</example>
-            <example correction="tiyan">Masakit ang <marker>tyan</marker> ko.</example>
-            <example correction="tiyempo">Wala sa <marker>tyempo</marker> ang dating niya.</example>
-            <example correction="tiyahin">Dadating na ang <marker>tyahin</marker> ko galing Japan.</example>
-            <example correction="tiyuhin">Si <marker>tyuhin</marker> ko ay matapang.</example>
-            <example correction="matiyaga">Si Ornald ay <marker>matiyaga</marker>.</example>
+            <example correction="sakit" type="incorrect">Ang tiyan ko ay <marker>masaket</marker>.</example>
+            <example type="correct">Ang tiyan ko ay <marker>masakit</marker>.</example>
+            <example correction="mabait" type="incorrect">Talagang <marker>mabaet</marker> siyang bata.</example>
+            <example type="correct">Talagang <marker>mabait</marker> siyang bata.</example>
+            <example correction="bakit" type="incorrect"><marker>Baket</marker> hindi ka sumama?</example>
+            <example type="correct"><marker>Bakit</marker> hindi ka sumama?</example>
+            <example correction="pangit" type="incorrect">Hindi naman siya <marker>panget</marker>.</example>
+            <example type="correct">Hindi naman siya <marker>pangit</marker>.</example>
+            <example correction="ulit" type="incorrect">Gawin mo <marker>ulet</marker> ang activity.</example>
+            <example type="correct">Gawin mo <marker>ulit</marker> ang activity.</example>
+            <example correction="ulit" type="incorrect">Subukan mo <marker>ulet</marker> mamaya.</example>
+            <example type="correct">Subukan mo <marker>ulit</marker> mamaya.</example>
+            <example correction="sulit" type="incorrect"><marker>Sulet</marker> ang binili kong produkto.</example>
+            <example type="correct"><marker>Sulit</marker> ang binili kong produkto.</example>
+            <example correction="liit" type="incorrect">Ang <marker>liet</marker> ng bahay nila.</example>
+            <example type="correct">Ang <marker>liit</marker> ng bahay nila.</example>
+            <example correction="init" type="incorrect">Ang <marker>inet</marker> ng panahon ngayon.</example>
+            <example type="correct">Ang <marker>init</marker> ng panahon ngayon.</example>
         </rule>
+		
 		
 		<!-- Formal Rule is (Ce -> Ci) -->
         <rule id="E" name="e(i)">
