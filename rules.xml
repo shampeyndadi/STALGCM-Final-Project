@@ -34,7 +34,7 @@
 		<!-- Formal Rule is (Ce -> Ci) -->
         <rule id="E" name="e(i)">
             <pattern case_sensitive="no">
-                <token regexp="yes">bumile|nabile|pabile|binile|kinilite|kilite|kumilite|Nawile|Mawile</token>
+                <token regexp="yes">.*[^aeiou]e</token>
             </pattern>
             
 			<message>Do you mean <suggestion><match no="1" case_conversion="startlower" regexp_match="e$" regexp_replace="i"/></suggestion>?</message>
