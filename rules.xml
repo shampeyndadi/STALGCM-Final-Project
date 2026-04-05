@@ -4,7 +4,7 @@
   <category id="MCO2_FILIPINO_SPELLING" name="Filipino Spelling 1">
         <rule id="ET_IT" name="ET(IT)">
             <pattern case_sensitive="no">
-                <token regexp="yes">.*et$</token>
+                <token regexp="yes">.*et$ <exception regexp="yes">dyaket|tiket|porket|pinakbet|pakbet</exception></token>
             </pattern>
 
             <message>Do you mean <suggestion><match no="1" regexp_match="(.*)et$" regexp_replace="$1it"/></suggestion>?</message>
