@@ -34,7 +34,7 @@
 		<!-- Formal Rule is (Ce -> Ci) -->
         <rule id="E" name="e(i)">
             <pattern case_sensitive="no">
-                <token regexp="yes">.*[^aeiou]e</token>
+                <token regexp="yes">.*[^aeiou]e$<exception regexp="yes">kalye|pwede|libre|kape|karne|kotse|swerte|peste|atake|klase|base|norte|tsokolate|estante|verde|libre</exception></token>
             </pattern>
             
 			<message>Do you mean <suggestion><match no="1" case_conversion="startlower" regexp_match="e$" regexp_replace="i"/></suggestion>?</message>
@@ -62,15 +62,12 @@
 
 	  	<rule id="AI" name="ai(ay)">
             <pattern case_sensitive="no">
-                <token regexp="yes">.*[bcdfghjklmnpqrstvwxyz]ai</token>
+                <token regexp="yes">.*[bcdfghjklmnpqrstvwxyz]ai$<exception regexp="yes">shanghai|siomai|chai|acai|gai</exception></token>
             </pattern>
             
-            <message>Do you mean 
-				<suggestion>
-					<match no="1" case_conversion="startlower" regexp_match="i$" regexp_replace="y"/>
-				</suggestion>?
-			</message>
+            <message>Do you mean <suggestion><match no="1" case_conversion="startlower" regexp_match="i$" regexp_replace="y"/></suggestion>?</message>
             <short>Sound and Letter Change</short>
+            
             <example correction="tambay" type="incorrect">Tara <marker>tambai</marker> tayo sa labas mamaya.</example>
             <example type="correct">Tara <marker>tambay</marker> tayo sa labas mamaya.</example>
             <example correction="sanay" type="incorrect">Hindi pa ako <marker>sanai</marker> sa ginagawa natin.</example>
